@@ -39,13 +39,16 @@ import javax.swing.JOptionPane;
             double d=a11*a22 - a21*a12;
             double d1=b1*a22 - b2*a12;
             double d2=a11*b2 - a21*b1;
-            if(d!=0){
-                double x1=d1/d;
-                double x2=d2/d;
-                JOptionPane.showMessageDialog(null,"The first number is: "+x1+ "\nThe second number is:"+x2,"RESULT",JOptionPane.INFORMATION_MESSAGE);
+            if(d==0&&d1==0){
+                JOptionPane.showMessageDialog(null,"infinite many solutions","RESULT",JOptionPane.INFORMATION_MESSAGE);
+            }
+            if(d==0&&d1!=0){
+                JOptionPane.showMessageDialog(null,"No solution","RESULT",JOptionPane.INFORMATION_MESSAGE);
             }
             else{
-                JOptionPane.showMessageDialog(null,"The equation has no root","RESULT",JOptionPane.INFORMATION_MESSAGE);
+                double x=d1/d;
+                double y=d2/d;
+                JOptionPane.showMessageDialog(null, "solution:\n\tx = " + x + "\n\ty = " + y,"RESULT",JOptionPane.INFORMATION_MESSAGE);
             }
              System.exit(0);
         }
