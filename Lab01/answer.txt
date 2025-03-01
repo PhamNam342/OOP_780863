@@ -1,0 +1,5 @@
+What happens if users choose"Cancel"?
+Nếu người dùng chọn Cancel thì trên màn hình sẽ hiển thị 1 hộp thoại ghi "You've chosen:NO"
+How to customize the options to users, e.g. only two options:"Yes" and "No", OR "I do" and "I don't"(Suggestion:Use Javadocs or using Esclipe/Netbean IDE help)
+Ta sẽ chọn custom option: String option[] = {"Yes", "No"};
+Sau đó ta sẽ sử dụng JOptionPane.showOptionDialog
