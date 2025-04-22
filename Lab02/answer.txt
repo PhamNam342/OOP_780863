@@ -1,0 +1,26 @@
+Question1:
+If you create a constructor method to build a DVD by title then create a constructor method to build a DVD by category. Does JAVA allow you to do this?
+-->Java cho phép bạn tạo nhiều constructor trong cùng 1 class bằng cách nạp chồng constructor miễn là danh sách tham số khác nhau
+Với danh sách 2 tham số khác nhau nên Java sẽ biết gọi constructor phù hợp.
+Ví dụ
+// constructor1:
+public book(String title){
+ 	this.title=title;
+	}
+// constructor2:
+public book(String title,String director){
+	this.title=title;
+	this.director=director;
+	}
+Question2:
+Try to add a method addDigitalVideoDisc which allows to pass an arbitrary number of arguments for dvd. Compared to an array parameter. What do you prefer in this case?
+-->Sử dụng varargs thuận tiện hơn giúp truyền bất kỳ tham số à không phải tạo mảng thủ công điều này giúp code ngắn ngọn hơn.
+Question3:
+Is JAVA a Pass by Value or a Pass by Reference programming language?
+-->Java luôn truyền tham trị (pass by value) đối với đối tượng, giá trị của tham chiếu được truyền vào, do đó tham chiếu không thể thay đổi nhưng nội dung của đối tượng có thể thay đổi.Nếu 1 phương thức thay đổi giá trị của biến này, nó chỉ ảnh hưởng đến bản sao,không ảnh hưởng đến giá trị gốc.
+Question4:
+After the call of swap(jungleDVD, cinderellaDVD) why does the title of these two objects still remain?
+--> Vì 2 đối tượng trong phương thức swap chỉ là bản sao đổi tượng của hàm main. Bởi vậy không đổi giá trị trong phương thức hàm swap.
+Question5:
+After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()) why is the title of the JungleDVD changed?
+-->Tiêu đề của jungleDVD thay đổi do trong phương thức changeDVD , title của jungleDVD được thay đổi lại bằng hàm setTitle(), nên nó sẽ tác động tới đổi tượng mà nó tham chiếu lệnh( dvd.title=new title) Kết quả là jungleDVD.title được cập nhật thành"Cinderella", trong khi cinderellaDVD.title được giữ nguyên
