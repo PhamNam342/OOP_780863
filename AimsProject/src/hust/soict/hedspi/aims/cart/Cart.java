@@ -88,19 +88,28 @@ public class Cart {
 	                found = true;
 	            }
 	        }
-	        if (found) {
+	        if (!found) {
 	            System.out.println("No matching titles found for \"" + id + "\".");
 	        }
 
 	   }
-	   public Media searchByTitle(String title) {
-	        boolean found = false;
-	        for (int i = 0; i < itemsOrdered.size(); i++) {
-	            if (isMatch(itemsOrdered.get(i).getTitle(), title)) {
-	                return itemsOrdered.get(i);
-	            }
+	   public void searchByTitle(String title) {
+	        if(itemsOrdered.isEmpty()) {
+	        	System.out.println("The cart is empty!");
 	        }
-	        return null;
+	        else {
+	        	boolean found = false;
+	        	for(Media md : itemsOrdered) {
+	        		if(md.getTitle().equals(title)) {
+	        			found = true;
+	        			System.out.println(md.toString());
+	        			break;
+	        		}
+	        	}
+	        	if (!found) {
+		            System.out.println("No matching titles found for \"" + title + "\".");
+		        }
+	        }
 	    }
 
 	    public boolean isMatch(String mediaTitle, String inputTitle) {

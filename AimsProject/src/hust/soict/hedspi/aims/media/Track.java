@@ -26,8 +26,8 @@ public class Track implements Playable {
 		if(this == obj) return true;
 		// TODO Auto-generated method stub
 		Track track =(Track) obj;
-		
-		return this.equals(track.getTitle()) && this.equals(track.getLength());
+		if (!(obj instanceof Track)) return false;
+		return title.equalsIgnoreCase(track.getTitle())&& length == track.getLength();
 	}
 	
 }
