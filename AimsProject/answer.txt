@@ -1,4 +1,4 @@
- Question1 :Which classes are aggregates of other classes?
+Question1 :Which classes are aggregates of other classes?
 ==>Cart là aggregate của Media (Book, CompactDisc, DigitalVideoDisc)
 CompactDisc là aggregate của Track
 Store là aggregate của Media
@@ -18,7 +18,7 @@ public int compareTo(Media media) {
 }
 Question 3:
 Can we have two ordering rules of the item (by title then cost and by cost then title) if we use this Comparable interface approach?
-==>Có thể nhưng bạn cần kết hợp Comparable với Comparator để đạt được đó
+==>Không. Comparable chỉ cho phép một cách sắp xếp duy nhất (qua compareTo()).Nếu cần nhiều cách sắp xếp (ví dụ theo cost rồi title, hoặc ngược lại), ta nên dùng Comparator như đã làm trước đó.
 Question 4:
  Suppose the DVDs have a different ordering rule from the other media types, that is by title, then decreasing length, then cost. How would you modify your code to allow this?
 ==>
