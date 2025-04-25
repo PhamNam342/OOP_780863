@@ -7,7 +7,7 @@ public abstract class Media {
 	private String title;
 	private String category;
 	private float cost;
-	private int nb = 0;
+	private static int nb = 0;
 	public static final Comparator<Media> COMPARE_BY_TITLE_COST = new MediaComparatorByTitleCost();
 	public static final Comparator<Media> COMPARE_BY_COST_TITLE = new MediaComparatorByCostTitle();
 	public int getId() {
@@ -40,26 +40,26 @@ public abstract class Media {
 	public Media(String title) {
 		this.title = title;
 		nb ++;
-		id = nb;
+		this.id = nb;
 	}
 	public Media(String title, String Category) {
 		this.title = title;
 		this.category = Category;
 		nb++;
-		id = nb;
+		this.id = nb;
 	}
 	public Media(String title , float cost) {
 		this.title = title;
 		this.cost = cost;
 		nb++;
-		id = nb;
+		this.id = nb;
 	}
 	public Media(String title, String category , float cost) {
 		this.title = title;
 		this.category = category;
 		this.cost = cost;
 		nb++;
-		id = nb;
+		this.id = nb;
 	}
 	public Media(int id, String title, String category, float cost) {
         this.id = id;
@@ -67,7 +67,7 @@ public abstract class Media {
         this.category = category;
         this.cost = cost;
         nb++;
-        id = nb;
+        
     }
 
 	@Override
