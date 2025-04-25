@@ -93,7 +93,7 @@ public class Cart {
 	        }
 
 	   }
-	   public void searchByTitle(String title) {
+	   public void searchTitle(String title) {
 	        if(itemsOrdered.isEmpty()) {
 	        	System.out.println("The cart is empty!");
 	        }
@@ -111,7 +111,19 @@ public class Cart {
 		        }
 	        }
 	    }
-
+	   public Media searchByTitle(String title) {
+		   if(itemsOrdered.isEmpty()) {
+			   return null;
+		   }
+		   else {
+			   for(Media md : itemsOrdered) {
+				   if(md.getTitle().equals(title)) {
+					   return md;
+				   }
+			   }
+			   return null;
+		   }
+	   }
 	    public boolean isMatch(String mediaTitle, String inputTitle) {
 	        return mediaTitle.contains(inputTitle);
 	    }
