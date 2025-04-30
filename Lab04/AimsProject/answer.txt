@@ -1,15 +1,15 @@
 1.3 Compare Swing and AWT elements
 	1. Compare the top-level containers in Swing and AWT
 	AWT:
-	- Frame là container cấp cao nhất chính cho các ứng dụng 	AWT.
-	-Dialog dùng để tạo các cửa sổ hộp thoại (có thể là modal 	hoặc non-modal).
+	- Frame là container cấp cao nhất chính cho các ứng dụng AWT.
+	-Dialog dùng để tạo các cửa sổ hộp thoại (có thể là modal hoặc non-modal).
 	-Applet dùng để tạo các applet chạy trong trình duyệt web.
 
 	Swing:
-	-JFrame là container cấp cao nhất chính cho các ứng dụng 	Swing. Nó là lớp con của java.awt.Frame nhưng cung cấp 	nhiều tính năng hơn.
-	-JDialog dùng để tạo các cửa sổ hộp thoại trong Swing. Nó 	mở rộng từ java.awt.Dialog.
-	-JApplet dùng để tạo các applet trong Swing. Nó kế thừa từ 	java.applet.Applet.
-	-JWindow là một container của Swing mở rộng từ 	-	java.awt.Window và cung cấp các tính năng bổ sung.
+	-JFrame là container cấp cao nhất chính cho các ứng dụng Swing. Nó là lớp con của java.awt.Frame nhưng cung cấp 	nhiều tính năng hơn.
+	-JDialog dùng để tạo các cửa sổ hộp thoại trong Swing. Nó mở rộng từ java.awt.Dialog.
+	-JApplet dùng để tạo các applet trong Swing. Nó kế thừa từ java.applet.Applet.
+	-JWindow là một container của Swing mở rộng từ-java.awt.Window và cung cấp các tính năng bổ sung.
 	2. Compare Class Names AWT and Swing components.
 	AWT Class Name	Corresponding Swing Class Name
 	Button	         	JButton
@@ -30,13 +30,13 @@
 	PopupMenu	 	JPopupMenu
 	3. Event handling
 	AWT Event Handling:
-	AWT sử dụng mô hình (Delegation Event 	Model) được giới 	thiệu từ JDK 1.1.
-	Các trình (event listener) trong AWT 	thuộc gói 	java.awt.event.
-	Các thành phần AWT sinh ra sự kiện và các sự kiện đó được 	xử lý bởi các trình lắng nghe. Ví dụ, một ActionEvent từ 	Button sẽ được xử lý bởi một ActionListener.
+	AWT sử dụng mô hình (Delegation Event 	Model) được giới thiệu từ JDK 1.1.
+	Các trình (event listener) trong AWT thuộc gói java.awt.event.
+	Các thành phần AWT sinh ra sự kiện và các sự kiện đó được xử lý bởi các trình lắng nghe. Ví dụ, một ActionEvent từ Button sẽ được xử lý bởi một ActionListener.
 	Swing Event Handling:
 	Swing cũng sử dụng (Delegation Event Model).
-	Swing mở rộng cơ chế xử lý sự kiện của AWT. Các trình 	(event listener) thuộc cả gói javax.swing.event và 	java.awt.event.
-	Swing cung cấp khả năng xử lý sự kiện phức tạp hơn. Ví dụ, 	JButton sử dụng ActionListener tương tự như Button, nhưng 	Swing bổ sung thêm nhiều loại listener khác như 	ChangeListener cho JSlider và JSpinner.
+	Swing mở rộng cơ chế xử lý sự kiện của AWT. Các trình (event listener) thuộc cả gói javax.swing.event và java.awt.event.
+	Swing cung cấp khả năng xử lý sự kiện phức tạp hơn. Ví dụ, JButton sử dụng ActionListener tương tự như Button, nhưng Swing bổ sung thêm nhiều loại listener khác như 	ChangeListener cho JSlider và JSpinner.
 3.1.4 How the code checks if the Media implements the Playable interface to create a "Play" button.
 ==>Chúng ta có thể sử dụng toán tử instanceof. Toán tử này kiểm tra xem một đối tượng có phải là thể hiện (instance) của một lớp hoặc interface cụ thể hay không.
 
