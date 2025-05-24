@@ -1,0 +1,5 @@
+Q: The Aims class must be updated to handle any exceptions generated when the play() methods
+are called. What happens when you don’t update for them to catch?
+A: 
+Java sẽ ném ra một ngoại lệ chưa được xử lý (uncaught exception), khiến chương trình bị crash ngay tại dòng lệnh gây ra lỗi. Một thông báo lỗi (stack trace) sẽ hiện ra trong console. Điều này có thể dẫn đến trải nghiệm người dùng không tốt và khiến ứng dụng không ổn định.
+Việc xử lý ngoại lệ (try-catch) sẽ giúp chương trình tiếp tục chạy bình thường ngay cả khi có lỗi xảy ra, đồng thời có thể thông báo lỗi một cách rõ ràng cho người dùng (ví dụ: "Không thể phát media này vì bị lỗi định dạng.").
